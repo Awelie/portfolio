@@ -1,7 +1,9 @@
 /* Variable */
 :root{
     --background-color: #F0F4F4;
+    --background-color-light: rgba(240, 244, 244, 0.05);
     --text-color: #182747;
+    --text-accent: #FF6E31;
     --mockup-1: #B12647;
     --mockup-1-light: rgba(177, 38, 71, 0.3);
     --mockup-2: #51B39F;
@@ -37,6 +39,7 @@ body {
     font-family: 'Garamount';
     color: var(--text-color);
     font-size: var(--font-size-p);
+    color: var(--text-color) !important;
 }
 
 img {
@@ -66,6 +69,8 @@ h2 {
     height: auto;
     box-sizing: border-box;
     align-items: center;
+    background-color: var(--background-color-light);
+    backdrop-filter: blur(4px);
 }
 
 .navbar a {
@@ -75,7 +80,7 @@ h2 {
 }
 
 .navbar a:hover {
-    color: var(--text-color);
+    color: var(--text-accent);
 }
 
 .navbar .nav-links ul {
@@ -108,15 +113,13 @@ h2 {
 
 /* Container */
 
-.container-body-top {
+.container-header {
     height: 100vh;
     width: 60%;
     margin: auto;
     padding-top: 15%;
 }
-
 .container-body {
-    top: 0;
     height: 100vh;
     width: 60%;
     margin: auto;
@@ -132,7 +135,7 @@ h2 {
 }
 
 .link:hover {
-    color: var(--text-color);
+    color: var(--text-accent);
 }
 
 /* Links */
