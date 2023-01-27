@@ -1,3 +1,4 @@
+/* Variable */
 :root{
     --background-color: #F0F4F4;
     --text-color: #182747;
@@ -7,10 +8,15 @@
     --mockup-2-light: rgba(81, 179, 159, 0.5);
     --mockup-3: #DEAD75;
     --mockup-3-light: rgba(222, 173, 117, 0.5);
-    --font-size-H1: 40px;
-    --font-size-H2: 30px;
-    --font-size-p: 20px;
+    --font-size-H1: 60px;
+    --font-size-H2: 55px;
+    --font-size-p: 30px;
+    --font-size-footer: 20px;
 }
+
+/* Variable class */
+
+/* CSS generalities */
 
 * {
     margin: 0;
@@ -33,28 +39,43 @@ body {
     font-size: var(--font-size-p);
 }
 
-header {
-    height: 100vh;
-    width: 100vw;
+img {
+    object-fit: cover;
 }
 
+p {
+    font-size: var(--font-size-p) !important;
+}
+
+h1 {
+    font-size: var(--font-size-H1) !important;
+}
+
+h2 {
+    font-size: var(--font-size-H2) !important;
+}
+
+/* Navigation bar */
+
 .navbar {
-    position: absolute;
+    position: fixed !important;
     padding: 50px;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    height: auto;
     box-sizing: border-box;
     align-items: center;
 }
 
 .navbar a {
     color: var(--text-color);
-    font-size: var(--font-size-H1);
+    font-size: var(--font-size-H2);
+    text-decoration: none;
 }
 
-.navbar a .name {
-    font-size: var(--font-size-H2);
+.navbar a:hover {
+    color: var(--text-color);
 }
 
 .navbar .nav-links ul {
@@ -85,22 +106,42 @@ header {
     }
 }
 
-.container {
+/* Container */
+
+.container-body-top {
     height: 100vh;
-    width: 100%;
-    border: solid black 1px;
-    padding-top: 20%;
-    
+    width: 60%;
+    margin: auto;
+    padding-top: 15%;
 }
 
-.container-left {
-    height: 100%;
-    width: 50%;
-    float: left;
+.container-body {
+    top: 0;
+    height: 100vh;
+    width: 60%;
+    margin: auto;
 }
 
-.container-right {
-    height: 100%;
-    width: 50%;
-    float: right;
+/* Links */
+
+.link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: var(--font-size-p);
+    font-weight: bold;
 }
+
+.link:hover {
+    color: var(--text-color);
+}
+
+/* Links */
+.footer {
+    font-size: var(--font-size-footer);
+}
+
+/* Index */
+.mockup1 {
+    background-color: var(--mockup-3-light);
+}
+
