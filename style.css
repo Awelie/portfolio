@@ -1,27 +1,24 @@
-/* Variable */
+/* Variables */
+
 :root{
     --background-color: #F0F4F4;
     --background-color-light: rgba(240, 244, 244, 0.05);
     --text-color: #182747;
     --text-accent: #FF6E31;
+    --disabled-color: #DDDDDD;
     --mockup-1: #B12647;
     --mockup-1-light: rgba(177, 38, 71, 0.3);
     --mockup-2: #51B39F;
     --mockup-2-light: rgba(81, 179, 159, 0.5);
     --mockup-3: #DEAD75;
     --mockup-3-light: rgba(222, 173, 117, 0.5);
-    --font-size-h1: clamp(50px, 5vw, 100px);
-    --font-size-h2: clamp(40px, 5vw, 90px);
-    --font-size-h3: clamp(30px, 5vw, 80px);
-    --font-size-p: clamp(20px, 5vw, 40px);
-    --font-size-h1-preview: clamp(30px, 5vw, 60px);
-    --font-size-h2-preview: clamp(20px, 5vw, 50px);
-    --font-size-h3-preview: clamp(15px, 5vw, 40px);
-    --font-size-p-preview: clamp(10px, 5vw, 30px);
-    --font-size-footer: clamp(10px, 5vw, 30px);
+    --mockup-3-accent: #F18703;
+    --font-size-h1: clamp(55px, 5vw, 80px);
+    --font-size-h2: clamp(45px, 5vw, 55px);
+    --font-size-h3: clamp(35px, 5vw, 45px);
+    --font-size-p: clamp(25px, 5vw, 35px);
+    --font-size-footer: clamp(15px, 5vw, 20px);
 }
-
-/* Variable class */
 
 /* CSS generalities */
 
@@ -63,14 +60,6 @@ svg:hover {
     transform: scale(1.2);
 }
 
-p {
-    font-size: var(--font-size-p) !important;
-}
-
-.p-accent {
-    font-weight: 500;
-}
-
 h1 {
     font-size: var(--font-size-h1) !important;
 }
@@ -83,20 +72,12 @@ h3 {
     font-size: var(--font-size-h3) !important;
 }
 
-.p-preview {
-    font-size: var(--font-size-p-preview) !important;
+p {
+    font-size: var(--font-size-p) !important;
 }
 
-.h1-preview {
-    font-size: var(--font-size-h1-preview) !important;
-}
-
-.h2-preview {
-    font-size: var(--font-size-h2-preview) !important;
-}
-
-.h3-preview {
-    font-size: var(--font-size-h3-preview) !important;
+.p-accent {
+    font-weight: 500;
 }
 
 /* Navigation bar */
@@ -147,15 +128,11 @@ h3 {
 .container-header {
     min-height: 100vh;
     margin: auto;
-    padding-top: 20%;
-}
-.container-body {
-    min-height: 100vh;
-    margin: auto;
+    padding-top: 15%;
 }
 
 .container-header .row {
-    margin-bottom: 10%;
+    margin-bottom: 15%;
 }
 
 /* Links */
@@ -188,11 +165,98 @@ h3 {
 }
 
 /* Footer */
-.footer {
+
+footer {
     font-size: var(--font-size-footer) !important;
 }
 
+/* Button */
+
+.button-process {
+    background-color: var(--mockup-3-accent);
+    color: var(--background-color);
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    text-align: center;
+    font-size: var(--font-size-footer) !important;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    line-height: 150px;
+}
+
+.button-process:hover {
+    background-color: var(--mockup-3-light);
+    color: var(--background-color);
+}
+
+.button-process-disabled {
+    background-color: var(--disabled-color);
+    color: var(--background-color);
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    text-align: center;
+    font-size: var(--font-size-footer) !important;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    line-height: 150px;
+}
+
+.button-process-disabled:hover {
+    background-color: var(--disabled-color);
+    color: var(--background-color);
+}
+
+@media screen and (max-width: 1900px) {
+    .button-process-disabled {
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+    }
+    .button-process {
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .button-process-disabled {
+        width: 110px;
+        height: 110px;
+        line-height: 110px;
+    }
+    .button-process {
+        width: 110px;
+        height: 110px;
+        line-height: 110px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .button-process-disabled {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+    }
+    .button-process {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+    }
+}
+
 /* Index */
+
 .mockup1 {
     background-color: var(--mockup-3-light);
 }
@@ -205,32 +269,11 @@ h3 {
     background-color: var(--mockup-3-light);
 }
 
-/* Button */
-.btn-circle.btn-xl {
-    background-color: var(--mockup-3);
+.preview-mockup-1 {
+    background-image: url(img/Mockup-1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    height: auto;
-    padding: 10px 16px;
-    border-radius: 35px;
-    font-size: 24px;
-    line-height: 1.33;
-}
-
-.btn-circle.btn-xl:hover {
-    background-color: var(--mockup-3-light);
-}
-
-.btn-circle {
-    background-color: var(--mockup-3);
-    width: 100%;
-    height: auto;
-    padding: 6px 0px;
-    border-radius: 15px;
-    text-align: center;
-    font-size: 12px;
-    line-height: 1.42857;
-}
-
-.btn-circle:hover {
-    background-color: var(--mockup-3-light);
+    min-height: 40vh;
 }
